@@ -81,12 +81,14 @@ code {
   grid-row: 1/3;
   display: flex;
   flex-direction: column-reverse;
+  align-items: flex-end;
   overflow-y: auto;
 }
-
 .rightFrame_Output > :first-child {
   margin-top: auto;
 }
+
+
 .rightFrame_Input {
   grid-column: 2/3;
   grid-row: 3/4;
@@ -134,8 +136,15 @@ code {
 }
 
 .MessageDiv {
+  width: auto;
+  max-width: 80%;
   display: flex;
   flex-direction: column;
 
   align-items: flex-end;
+}
+
+
+.select {
+  text-decoration: underline;
 }

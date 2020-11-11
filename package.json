@@ -24,7 +24,10 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build" ,
+    "lint" : "eslint ./src",
+    "lint:fix" : "eslint ./src --fix"
+
   },
   "eslintConfig": {
     "extends": [
@@ -43,5 +46,13 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "eslint": "^7.13.0",
+    "eslint-config-prettier": "^6.15.0",
+    "eslint-plugin-html": "^6.1.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-prettier": "^3.1.4",
+    "prettier": "^2.1.2"
   }
 }
