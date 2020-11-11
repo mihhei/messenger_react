@@ -131,6 +131,17 @@ code {
   transition: 0.3s box-shadow;
 }
 
+.MessageInline{
+  display: inline-block;
+  width: auto;
+  text-align: justify;
+ 
+}
+.Message span {
+  color: red;
+
+}
+
 .Date {
   font-size: 0.7rem;
 }

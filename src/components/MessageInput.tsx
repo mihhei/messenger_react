@@ -40,7 +40,7 @@ export const MessageInput: React.FC<MessageInputProps> = ({
 
   const cheking = ():void => {
     if (ref.current!.value !== '') {
-      if (ref.current!.value.match(/\/wiki text/g)){
+      if (ref.current!.value.match(/\/wm/g)){
         setWikiText(ref.current!.value);
       }
       else{
@@ -51,7 +51,7 @@ export const MessageInput: React.FC<MessageInputProps> = ({
   }
 
   const setWikiText = (inputSearch:string):void => {
-    const result =  (/\/wiki text/g).exec(inputSearch);
+    const result =  (/\/wm/g).exec(inputSearch);
     const wiki_search = inputSearch.slice(0,result!.index).trim();
         let url = "https://en.wikipedia.org/w/api.php"; 
         url = url + "?origin=*";

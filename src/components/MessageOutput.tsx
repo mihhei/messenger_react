@@ -1,4 +1,5 @@
 import React from 'react';
+import parse from 'html-react-parser';
 import { ITodo } from '../interfaces';
 
 type MessageOutputProps = {
@@ -13,8 +14,9 @@ export const MessageOutput: React.FC<MessageOutputProps> = ({ todos }) => (
         return todo.container.map((msg) => (
           
           <div className="Message" key={msg.id}>
-            {msg.message}
-          <span className="Date">{msg.date}</span>
+            <div className="MessageInline">
+            {parse(msg.message)}</div>
+          <div className="Date">{msg.date}</div>
           </div>
         ));
       }
