@@ -23,7 +23,8 @@ export const TodoList: React.FC<TodoListProps> = ({
       }
       return (
         <li className="todo ml1" key={todo.id} onClick={onToggle.bind(null, todo.id)} onContextMenu={
-          (event:React.MouseEvent)=>{todo.x= event.pageX+"px";
+          (event:React.MouseEvent)=>{event.preventDefault();
+             todo.x= event.pageX+"px";
         todo.y=event.pageY+"px";
         onContext(todo.id)}
         }>

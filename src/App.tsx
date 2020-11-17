@@ -7,9 +7,6 @@ import { MessageOutput } from './components/MessageOutput';
 import { ContextMenu } from './components/ContextMenu';
 
 const App: React.FC = () => {
-  document.addEventListener("contextmenu", (event) => {
-    event.preventDefault();
-  });
 
   const [todos, setTodos] = useState<ITodo[]>([]);
 
@@ -64,6 +61,17 @@ const App: React.FC = () => {
     );
   };
   const contextHandler = (id: number) => {
+    window.addEventListener("click", ()=>{
+      setTodos((prev) => prev.map((todo) => {
+        if (todo.showContext === true) {
+          return {
+            ...todo,
+            showContext: false,
+          };
+        } return todo;
+      }));
+    }
+    )
     
       setTodos((prev) => prev.map((todo) => {
         if (todo.id === id) {
@@ -74,15 +82,8 @@ const App: React.FC = () => {
         } return { ...todo, showContext: false };
       }));
     };
-
-    document.addEventListener("click", () => {
-      setTodos((prev) => prev.map((todo) => {
-          return {
-            ...todo,
-            showContext: false,
-          };
-        } ));
-    });
+    
+    
 
 
   
