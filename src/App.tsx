@@ -4,8 +4,13 @@ import { TodoList } from './components/TodoList';
 import { IMessage_Date, ITodo } from './interfaces';
 import { MessageInput } from './components/MessageInput';
 import { MessageOutput } from './components/MessageOutput';
+import { ContextMenu } from './components/ContextMenu';
 
 const App: React.FC = () => {
+  document.addEventListener("contextmenu", (event) => {
+    event.preventDefault();
+  });
+
   const [todos, setTodos] = useState<ITodo[]>([]);
 
   let chatName_exist:boolean = false;
@@ -16,6 +21,9 @@ const App: React.FC = () => {
       id: Date.now(),
       completed: false,
       container: [],
+      showContext: false,
+      x:"0px",
+      y:"0px",
 
     };
     todos.map((todo) => {
@@ -55,6 +63,29 @@ const App: React.FC = () => {
       }),
     );
   };
+  const contextHandler = (id: number) => {
+    
+      setTodos((prev) => prev.map((todo) => {
+        if (todo.id === id) {
+          return {
+            ...todo,
+            showContext: !todo.showContext,
+          };
+        } return { ...todo, showContext: false };
+      }));
+    };
+
+    document.addEventListener("click", () => {
+      setTodos((prev) => prev.map((todo) => {
+          return {
+            ...todo,
+            showContext: false,
+          };
+        } ));
+    });
+
+
+  
 
   return (
     <>
@@ -64,7 +95,8 @@ const App: React.FC = () => {
           <TodoForma onAdd={addHandler} />
         </div>
         <div className="leftFrame_ChatList">
-          <TodoList todos={todos} onToggle={toggleHandler} /* onRemove={removeHandler} *//>
+          <TodoList todos={todos} onToggle={toggleHandler} onContext={contextHandler}/* onRemove={removeHandler} *//>
+          <ContextMenu todos={todos} onRemove={removeHandler}/>
         </div>
         <div className="rightFrame_Input">
           <MessageInput todos={todos} addMessage={addMessageHandler} />

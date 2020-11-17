@@ -9,6 +9,7 @@ export const TodoForma: React.FC<TodoFormProps> = (props) => {
 
   const changeHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
     setTitle(event.target.value);
+    console.log(event);
   };
 
   const keyPressHandler = (event: React.KeyboardEvent) => {
@@ -21,7 +22,7 @@ export const TodoForma: React.FC<TodoFormProps> = (props) => {
   return (
     <div className="input-field mt2 ml1">
       <input
-        onChange={changeHandler}
+        onChange={changeHandler} 
         value={title}
         type="text"
         id="title"

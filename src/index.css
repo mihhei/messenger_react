@@ -159,3 +159,27 @@ code {
 .select {
   text-decoration: underline;
 }
+
+.custom_menu {
+  position: absolute;
+  z-index: 99999;
+  top: 0;
+  left: 0;
+  padding: 5px 0px;
+  background: white;
+  border: rgb(207, 207, 207) 1px solid;
+  border-radius: 3px;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.24);
+}
+
+.cm_item {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.9rem;
+  cursor: pointer;
+  padding: 0px 10px;
+}
+
+.cm_item:hover {
+  background-color: rgb(207, 207, 207);
+  transition: all 0.5s ease-out;
+}
