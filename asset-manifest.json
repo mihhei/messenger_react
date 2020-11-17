@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/messenger_react/static/css/main.4f7d8517.chunk.css",
-    "main.js": "/messenger_react/static/js/main.9204e660.chunk.js",
-    "main.js.map": "/messenger_react/static/js/main.9204e660.chunk.js.map",
+    "main.js": "/messenger_react/static/js/main.50d23d5b.chunk.js",
+    "main.js.map": "/messenger_react/static/js/main.50d23d5b.chunk.js.map",
     "runtime-main.js": "/messenger_react/static/js/runtime-main.140f87b6.js",
     "runtime-main.js.map": "/messenger_react/static/js/runtime-main.140f87b6.js.map",
     "static/js/2.1ba7bcb4.chunk.js": "/messenger_react/static/js/2.1ba7bcb4.chunk.js",
@@ -17,6 +17,6 @@
     "static/js/runtime-main.140f87b6.js",
     "static/js/2.1ba7bcb4.chunk.js",
     "static/css/main.4f7d8517.chunk.css",
-    "static/js/main.9204e660.chunk.js"
+    "static/js/main.50d23d5b.chunk.js"
   ]
 }
