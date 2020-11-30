@@ -81,12 +81,14 @@ code {
   grid-row: 1/3;
   display: flex;
   flex-direction: column-reverse;
+  align-items: flex-end;
   overflow-y: auto;
 }
-
 .rightFrame_Output > :first-child {
   margin-top: auto;
 }
+
+
 .rightFrame_Input {
   grid-column: 2/3;
   grid-row: 3/4;
@@ -129,13 +131,55 @@ code {
   transition: 0.3s box-shadow;
 }
 
+.MessageInline{
+  display: inline-block;
+  width: auto;
+  text-align: justify;
+ 
+}
+.Message span {
+  color: red;
+
+}
+
 .Date {
   font-size: 0.7rem;
 }
 
 .MessageDiv {
+  width: auto;
+  max-width: 80%;
   display: flex;
   flex-direction: column;
 
   align-items: flex-end;
+}
+
+
+.select {
+  text-decoration: underline;
+}
+
+.custom_menu {
+  position: absolute;
+  z-index: 99999;
+  top: 0;
+  left: 0;
+  padding: 5px 0px;
+  background: white;
+  border: rgb(207, 207, 207) 1px solid;
+  border-radius: 3px;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.24);
+}
+
+.cm_item {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.9rem;
+  cursor: pointer;
+  padding: 0px 10px;
+}
+
+.cm_item:hover {
+  background-color: rgb(207, 207, 207);
+  transition: all 0.5s ease-out;
 }

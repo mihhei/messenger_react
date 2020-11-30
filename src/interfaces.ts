@@ -2,7 +2,10 @@ export interface ITodo {
     title:string,
     id:number,
     completed:boolean,
-    container: any[]
+    container: any[],
+    showContext: boolean,
+    x:string,
+    y:string
 }
 
 export interface IMessage_Date {
